@@ -11,6 +11,8 @@ import dagger.Component
 )
 interface RandomIntComponent {
 
+    fun inject(fragment: RandomIntFragment)
+
     @Component.Factory
     interface Factory {
         fun create(mainComponent: MainComponent): RandomIntComponent

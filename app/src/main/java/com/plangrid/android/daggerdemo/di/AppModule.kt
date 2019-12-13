@@ -12,12 +12,11 @@ object AppModule {
     @AppScope
     @Provides
     fun provideTimedEmitter(
-        period: Long,
         timeUnit: TimeUnit
     ): TimedEmitter {
         return object : TimedEmitter {
             override fun emissions(): Flowable<Unit> {
-                return Flowable.interval(period, timeUnit).map { Unit }
+                return Flowable.interval(1, timeUnit).map { Unit }
             }
         }
     }

@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import com.plangrid.android.domain.getMainComponent
 import io.reactivex.disposables.CompositeDisposable
 import javax.inject.Inject
 
@@ -22,12 +23,12 @@ class RandomUUIDFragment : Fragment() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        // TODO inject here
-
+        DaggerRandomUUIDComponent.factory()
+            .create(getMainComponent())
+            .inject(this)
 
         viewModel = ViewModelProvider(this, viewModelFactory)
             .get(RandomUUIDViewModel::class.java)
-
     }
 
     override fun onCreateView(

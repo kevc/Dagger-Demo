@@ -10,6 +10,8 @@ import dagger.Component
 )
 interface RandomUUIDComponent {
 
+    fun inject(fragment: RandomUUIDFragment)
+
     @Component.Factory
     interface Factory {
         fun create(mainComponent: MainComponent): RandomUUIDComponent
