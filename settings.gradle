@@ -1,0 +1,2 @@
+include ':app', ':randomuuid', ':randomint', ':domain'
+rootProject.name='DaggerDemo'
