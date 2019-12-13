@@ -1,0 +1,35 @@
+# built application files
+./bin/*.apk
+*.ap_
+
+# files for the dex VM
+*.dex
+
+# Mac OS X Directory Services
+.DS_Store
+
+# Java class files
+*.class
+
+# Intellij files
+*.iml
+
+# generated files
+bin/
+gen/
+out/
+build/
+captures/
+.gradle/
+.idea/*
+!.idea/codeStyles/
+!.idea/copyright/
+.kotlintest
+reports/
+
+# Python generated files
+*.pyc
+
+local.properties
+
+
